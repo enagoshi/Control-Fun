@@ -10,6 +10,9 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var nameField: UITextField!
+    @IBOutlet weak var numberField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -20,6 +23,15 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    //tells textfield to give up control of the keyboard so that it will disappear off screen when user is done typing.
+    @IBAction func textFieldDoneEditing(sender: UITextField){
+        sender.resignFirstResponder()
+    }
+    
+    @IBAction func backgroundTap(sender: UIControl){
+        nameField.resignFirstResponder()
+        numberField.resignFirstResponder()
+    }
+    
 }
 

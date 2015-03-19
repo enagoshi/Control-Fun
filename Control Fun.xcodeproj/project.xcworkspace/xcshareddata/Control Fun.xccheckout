@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>D1220B9A-A9A4-4B81-AF46-E63F8BE5415B</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Control Fun</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>006A8067F52BEFBBA1A5E8C3281A1DA3453D57A5</key>
+		<string>https://github.com/enagoshi/Control-Fun.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Control Fun.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>006A8067F52BEFBBA1A5E8C3281A1DA3453D57A5</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/enagoshi/Control-Fun.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>006A8067F52BEFBBA1A5E8C3281A1DA3453D57A5</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>006A8067F52BEFBBA1A5E8C3281A1DA3453D57A5</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Control%20Fun</string>
+		</dict>
+	</array>
+</dict>
+</plist>

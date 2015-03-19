@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -12,19 +13,73 @@
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="UIControl">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KEf-K4-icU">
-                                <rect key="frame" x="130" y="20" width="341" height="167"/>
+                            <imageView clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="apress_logo" translatesAutoresizingMaskIntoConstraints="NO" id="KEf-K4-icU">
+                                <rect key="frame" x="214" y="0.0" width="172" height="80"/>
                             </imageView>
+                            <textField clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type in a name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cKw-Ik-VYY">
+                                <rect key="frame" x="91" y="114" width="493" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done"/>
+                                <connections>
+                                    <action selector="textFieldDoneEditing:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="7XZ-Ef-pxI"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uaI-H6-m5q">
+                                <rect key="frame" x="16" y="118" width="67" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type in a number" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hLW-AI-pfD">
+                                <rect key="frame" x="91" y="152" width="493" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <connections>
+                                    <action selector="textFieldDoneEditing:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="DNW-kZ-Uhu"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mFy-f6-kxG">
+                                <rect key="frame" x="16" y="156" width="67" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hLW-AI-pfD" firstAttribute="top" secondItem="cKw-Ik-VYY" secondAttribute="bottom" constant="8" symbolic="YES" id="6Dy-zW-LTl"/>
+                            <constraint firstItem="uaI-H6-m5q" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="6s0-RM-az9"/>
+                            <constraint firstItem="mFy-f6-kxG" firstAttribute="top" secondItem="uaI-H6-m5q" secondAttribute="bottom" constant="17" id="888-5l-6dB"/>
+                            <constraint firstItem="hLW-AI-pfD" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="9bG-x4-soi"/>
+                            <constraint firstItem="uaI-H6-m5q" firstAttribute="width" secondItem="mFy-f6-kxG" secondAttribute="width" id="Ea5-VV-0nw"/>
+                            <constraint firstItem="mFy-f6-kxG" firstAttribute="leading" secondItem="uaI-H6-m5q" secondAttribute="leading" id="FaN-RM-3VV"/>
+                            <constraint firstItem="hLW-AI-pfD" firstAttribute="leading" secondItem="cKw-Ik-VYY" secondAttribute="leading" id="NXG-mL-UL8"/>
+                            <constraint firstItem="hLW-AI-pfD" firstAttribute="leading" secondItem="mFy-f6-kxG" secondAttribute="trailing" constant="8" symbolic="YES" id="VEI-tH-AB4"/>
+                            <constraint firstAttribute="centerX" secondItem="KEf-K4-icU" secondAttribute="centerX" id="fhe-rC-VXb"/>
+                            <constraint firstItem="cKw-Ik-VYY" firstAttribute="top" secondItem="KEf-K4-icU" secondAttribute="bottom" constant="34" id="hb1-EM-u1H"/>
+                            <constraint firstItem="uaI-H6-m5q" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="98" id="j2S-da-ktm"/>
+                            <constraint firstItem="KEf-K4-icU" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="m9c-rq-y5n"/>
+                            <constraint firstItem="hLW-AI-pfD" firstAttribute="trailing" secondItem="cKw-Ik-VYY" secondAttribute="trailing" id="pT2-pe-eUT"/>
+                        </constraints>
+                        <connections>
+                            <action selector="backgroundTap:" destination="BYZ-38-t0r" eventType="touchDown" id="Gb0-dr-Qxd"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="nameField" destination="cKw-Ik-VYY" id="TGf-XP-ZCb"/>
+                        <outlet property="numberField" destination="hLW-AI-pfD" id="UXY-fa-dVB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="477" y="414"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="apress_logo" width="172" height="80"/>
+    </resources>
 </document>
